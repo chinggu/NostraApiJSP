@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 23, 2020 7:39:36 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="web.api.model.Movies" table="movies" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="title" type="string">
+            <column name="title" />
+        </property>
+        <property name="imagelink" type="string">
+            <column name="imagelink" />
+        </property>
+        <property name="link" type="string">
+            <column name="link" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="published" type="java.lang.Boolean">
+            <column name="published" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="createdAt" length="35" not-null="true" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updatedAt" length="35" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
